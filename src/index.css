@@ -12,3 +12,54 @@ a {
   text-decoration: none;
   color: black;
 }
+body {
+  background-color: #d7e3e8;
+}
+.movies {
+  width: 90%;
+  margin: 2rem auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1250px;
+  place-items: center;
+}
+.movie-link {
+  box-shadow: 20px 28px 44px -49px rgba(0, 0, 0, 1);
+  transition: transform 0.3s linear;
+  background-color: #fff;
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+  height: 400px;
+  width: 300px;
+}
+.movie-link img {
+  display: block;
+  width: 100%;
+}
+.movie-link:hover {
+  transform: scale(1.02);
+}
+.movie-info {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 1.2rem;
+  transform: translateY(100%);
+  transition: transform 0.3s linear;
+}
+/* .movie-info:hover {
+ 
+} */
+.movie-link:hover .movie-info {
+  transform: translateY(0);
+}
