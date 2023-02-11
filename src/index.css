@@ -120,3 +120,8 @@ body {
   letter-spacing: 2px;
   color: white;
 }
+.loading {
+  font-size: 3rem;
+  text-align: center;
+  letter-spacing: 2px;
+}
