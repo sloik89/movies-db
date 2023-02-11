@@ -7,7 +7,7 @@ const AppProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState({ show: false, msg: "" });
   const [movies, setMovies] = useState([]);
-  const [query, setQuery] = useState("sup");
+  const [query, setQuery] = useState("batman");
   const fetchMovies = async (url) => {
     console.log(url);
     setLoading(true);
@@ -36,6 +36,7 @@ const AppProvider = ({ children }) => {
         error,
         movies,
         query,
+        setQuery,
       }}
     >
       {children}
