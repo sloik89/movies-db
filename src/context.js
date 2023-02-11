@@ -9,7 +9,6 @@ const AppProvider = ({ children }) => {
   const [movies, setMovies] = useState([]);
   const [query, setQuery] = useState("batman");
   const fetchMovies = async (url) => {
-    console.log(url);
     setLoading(true);
     try {
       const response = await fetch(url);
@@ -21,7 +20,6 @@ const AppProvider = ({ children }) => {
         setError({ show: true, msg: data.Error });
       }
       setLoading(false);
-      console.log(data);
     } catch (err) {
       console.log(err);
     }
